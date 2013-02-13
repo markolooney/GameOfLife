@@ -140,7 +140,7 @@ namespace GameOfLife
                                 }
                             }
                         }
-                        if (array[i][j] == true)
+                        if (array[i][j])
                         {
                             if (survive - 1 < 2)
                             {
@@ -190,7 +190,7 @@ namespace GameOfLife
             {
                 for (int j = 0; j < Col; j++)
                 {
-                    if (array[i][j] == true)
+                    if (array[i][j])
                     {
                         if (generation % 10 == 1)
                         {
