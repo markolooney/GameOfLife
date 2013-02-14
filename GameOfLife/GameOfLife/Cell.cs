@@ -25,10 +25,10 @@ namespace GameOfLife
         //creates the rows for bitarray
         public BitArray[] array = new BitArray[Row];
         public BitArray[] array2 = new BitArray[Row];
+        static Color[] acolour = new Color[10] { Color.Black, Color.Red, Color.Blue, Color.Green, Color.Yellow, Color.DeepPink, Color.DarkViolet, Color.Orange, Color.MediumSlateBlue, Color.Navy };
 
         public Cell ()
         {
-            
 
             for (int i = 0; i < Row; i++)
             {
@@ -192,46 +192,7 @@ namespace GameOfLife
                 {
                     if (array[i][j])
                     {
-                        if (generation % 10 == 1)
-                        {
-                            Game1.Instance.spriteBatch.Draw(cell, new Vector2(i * 3, j * 3), Color.Black);
-                        }
-                        else if (generation % 10 == 2)
-                        {
-                            Game1.Instance.spriteBatch.Draw(cell, new Vector2(i * 3, j * 3), Color.Red);
-                        }
-                        else if (generation % 10 == 3)
-                        {
-                            Game1.Instance.spriteBatch.Draw(cell, new Vector2(i * 3, j * 3), Color.Blue);
-                        }
-                        else if (generation % 10 == 4)
-                        {
-                            Game1.Instance.spriteBatch.Draw(cell, new Vector2(i * 3, j * 3), Color.Green);
-                        }
-                        else if (generation % 10 == 5)
-                        {
-                            Game1.Instance.spriteBatch.Draw(cell, new Vector2(i * 3, j * 3), Color.Yellow);
-                        }
-                        else if (generation % 10 == 6)
-                        {
-                            Game1.Instance.spriteBatch.Draw(cell, new Vector2(i * 3, j * 3), Color.DeepPink);
-                        }
-                        else if (generation % 10 == 7)
-                        {
-                            Game1.Instance.spriteBatch.Draw(cell, new Vector2(i * 3, j * 3), Color.DarkViolet);
-                        }
-                        else if (generation % 10 == 8)
-                        {
-                            Game1.Instance.spriteBatch.Draw(cell, new Vector2(i * 3, j * 3), Color.Orange);
-                        }
-                        else if (generation % 10 == 9)
-                        {
-                            Game1.Instance.spriteBatch.Draw(cell, new Vector2(i * 3, j * 3), Color.MediumSlateBlue);
-                        }
-                        else if (generation % 10 == 0)
-                        {
-                            Game1.Instance.spriteBatch.Draw(cell, new Vector2(i * 3, j * 3), Color.Navy);
-                        }
+                       Game1.Instance.spriteBatch.Draw(cell, new Vector2(i * 3, j * 3), acolour[generation % 10]);
                     } 
                 }
             }

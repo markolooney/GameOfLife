@@ -121,7 +121,6 @@ namespace GameOfLife
              spriteBatch.Begin();
              //goes through list and draws content
              entities.ForEach(x => x.Draw(gameTime));
-
              spriteBatch.End();
             base.Draw(gameTime);
         }
